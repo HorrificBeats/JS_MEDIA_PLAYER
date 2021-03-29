@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5f43c40889.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!--Custom JS-->
+    <script type='text/javascript' src='main.js'></script>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css" type='text/css'>
+
+    <title>JS Media Player </title>
+
+</head>
+
+<body class='col-lg-12' onload='init()'>
+    <div class='container'>
+        <!--MEDIA CONTROLS-->
+        <div>
+            <div class='row' id='controls'>
+                <audio onended="suivant()" ontimeupdate="enLecture()" id="mediaplayer"></audio>
+                <div class='co-12 col-lg-6 col-md-6' id='artistvol'>
+                    <h4 style='font-weight: bold' id="songtitle">Nom artiste</h4>
+                    <div id="progresstime"></div>
+                    <div><input id="progression" oninput="changeTime()" max="" type="range" value="0">
+                    </div>
+                    <span id="durationtime"></span>
+                </div>
+                <div class='col-12 col-lg-6 col-md-6' id='mediacontrol'>
+                    <div id='pppn' class='row col-12 mx-auto'>
+                        <div class='col-4'>
+                            <i class="fas fa-backward mx" id='btn-previous'></i>
+                        </div>
+                        <div class='col-4 d-flex justify-content-center'>
+                            <i id='playpauseicon' class="fas fa-play mx"></i>
+                        </div>
+                        <div class='col-4 d-flex justify-content-end'>
+                            <i class="fas fa-forward mx" id='btn-next'></i>
+                        </div>
+                    </div>
+                    <div id='volume' class='col-12'>
+                        <i class="fas fa-volume-down" id='voldown'></i>
+                        <input type="range" max="1" value='0.5' step='0.1' id="myRangeA"></input>
+                        <i class="fas fa-volume-up" id='volup'></i>
+                    </div>
+                    <div id='misc' class='d-flex justify-content-around'>
+                        <i class="fas fa-sync-alt" id='btn-repeat'></i>
+                        <i id='mute-icn' class="fas fa-heart"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--  -->
+
+        <!--CARDS & CATEG-->
+        <main class='row'>
+            <aside class='col-lg-1 col-md-2 col-sm-12 col-xs-12 text-white'>
+                <button type="button" class="btn btn-dark text-white">Music</button>
+                <button type="button" class="btn btn-dark text-white">Video</button>
+                <button type="button" class="btn btn-dark text-white">Podcast</button>
+            </aside>
+            <section class='col-lg-11 col-md-10 col-sm-12 col-sm-12'>
+                <div class="card-deck row" id='pater'>
+                    <div id='cards'></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

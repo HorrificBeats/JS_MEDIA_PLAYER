@@ -1,0 +1,107 @@
+body.col-lg-12 {
+    background-color: rgb(255, 148, 90);
+}
+
+.container {
+    background-color: #6363634a;
+    border-radius: 15px;
+}
+
+.bg-dark {
+    background-color: #233d4d !important;
+}
+
+/* MEDIA CONTROLS */
+/* Parent Elem */
+#controls {
+    background-color: #233d4d;
+    margin-top: 20px;
+    padding: 2%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#btn-previous,
+#playpauseicon,
+#btn-next,
+#voldown,
+#volup,
+#btn-repeat,
+#mute-icn {
+    transition: 0.3s ease;
+    color: white;
+}
+
+#btn-previous:hover,
+#playpauseicon:hover,
+#btn-next:hover,
+#voldown:hover,
+#volup:hover,
+#btn-repeat:hover,
+#mute-icn:hover {
+    transition: 0.3s ease;
+    color: rgb(255, 131, 64);
+}
+
+#mediacontrol {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+#songtitle {
+    color: rgb(255, 255, 255);
+}
+
+#pppn {
+    width: 100%;
+}
+
+#volume {
+    margin-top: 10px;
+    width: 100%;
+}
+#myRangeA {
+    width: 90%;
+}
+#progression {
+    width: 100%;
+}
+
+#misc {
+    padding: 5px;
+    padding-left: 0px;
+}
+
+#artistvol {
+    color: white;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+/* ASIDE + CARDS */
+.btn {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.card-deck {
+    padding-top: 13px;
+}
+
+.card {
+    border-radius: 15px;
+    min-height: 300px;
+    transition: 0.3s ease;
+}
+.card:hover {
+    transition: 0.3s ease;
+    box-shadow: 4px 4px 5px 2px #00000065;
+}
+
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+}
+
+.card-deck .card {
+    margin-right: 0px;
+    margin-right: 0px;
+}
